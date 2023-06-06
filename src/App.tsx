@@ -1,15 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React, {useEffect} from 'react'
+import {BrowserRouter, Route, Routes} from "react-router-dom"
+import HomePage from "./pages/HomePage"
+import LoginPage from "./pages/LoginPage"
+import AuthBloc from "./bloc/AuthBloc"
 
-function App() {
-  const [count, setCount] = useState(0)
+const App: React.FC = () => {
+    useEffect(() => {
+        const authBloc = new AuthBloc()
 
-  return (
-    <>
+        const subscription = authBloc.logged.subscribe((loggedIn) => {
+          if (!loggedIn && window.location.pathname !== "/login") {
+            window.location.href = "/login"
+          }
+        })
 
-    </>
-  )
+        return () => subscription.unsubscribe()
+    }, [])
+
+
+    return (
+        <>
+            <BrowserRouter>
+
+                <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/login" element={<LoginPage />} />
+                </Routes>
+            </BrowserRouter>
+        </>
+    )
 }
 
 export default App

@@ -6,7 +6,12 @@ export default {
         './src/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        equestria: ['Equestria', 'serif'],
+        celestia: ['Celestia Redux Alternate', 'serif'],
+      }
+    },
   },
   plugins: [],
 } satisfies Config

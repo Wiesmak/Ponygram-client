@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Equestria';
+    src: url('../public/fonts/Equestria.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Celestia Redux Alternate';
+    src: url('../public/fonts/CelestiaMediumReduxAlternate.ttf') format('truetype');
+}
