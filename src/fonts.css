@@ -1,9 +1,11 @@
+/*noinspection CssUnknownTarget*/
 @font-face {
     font-family: 'Equestria';
-    src: url('../public/fonts/Equestria.ttf') format('truetype');
+    src: url('/fonts/Equestria.ttf') format('truetype');
 }
 
+/*noinspection CssUnknownTarget*/
 @font-face {
     font-family: 'Celestia Redux Alternate';
-    src: url('../public/fonts/CelestiaMediumReduxAlternate.ttf') format('truetype');
+    src: url('/fonts/CelestiaMediumReduxAlternate.ttf') format('truetype');
 }

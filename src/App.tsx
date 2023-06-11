@@ -3,6 +3,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom"
 import HomePage from "./pages/HomePage"
 import LoginPage from "./pages/LoginPage"
 import AuthBloc from "./bloc/AuthBloc"
+import {Toaster} from "react-hot-toast"
 
 const App: React.FC = () => {
     useEffect(() => {
@@ -20,6 +21,7 @@ const App: React.FC = () => {
 
     return (
         <>
+            <Toaster/>
             <BrowserRouter>
 
                 <Routes>

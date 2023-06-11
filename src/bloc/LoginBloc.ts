@@ -11,7 +11,7 @@ export class LoginBloc {
     }
 
     login(email: string, password: string): void {
-        fetch(`${ApplicationConfig.API_URL}/api/user/login`, {
+        fetch(`${ApplicationConfig.API_URL}/user/login`, {
             method: 'POST',
             body: JSON.stringify({email, password}),
             headers: {
@@ -33,7 +33,7 @@ export class LoginBloc {
     }
 
     register(email: string, password: string, username: string): void {
-        fetch(`${ApplicationConfig.API_URL}/api/user/register`, {
+        fetch(`${ApplicationConfig.API_URL}/user/register`, {
             method: 'POST',
             body: JSON.stringify({email, password, username}),
             headers: {
