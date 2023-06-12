@@ -100,6 +100,10 @@ export class ImagesBloc {
     set images(value: string[]) {
         this._images.next(value)
     }
+
+    public refresh(): void {
+        this.fetchImages()
+    }
 }
 
 export default new ImagesBloc()
